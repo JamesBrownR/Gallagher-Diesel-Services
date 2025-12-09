@@ -514,42 +514,142 @@
     <script>
         // --- 1. REVIEWS DATA (Edit this array to add/change reviews) ---
         const reviewsData = [
-            {
-                name: "Mike T.",
-                text: "Tim is a lifesaver. My truck broke down just outside Ardmore and he was there quickly. Diagnosed the electrical issue and had me back on the road in hours.",
-                stars: 5
-            },
-            {
-                name: "Sarah Jenkins",
-                text: "Professional, knowledgeable, and fair pricing. Hard to find good diesel mechanics these days who actually show up. Gallagher Diesel is top notch.",
-                stars: 5
-            },
-            {
-                name: "Red River Logistics",
-                text: "We use Gallagher for our fleet maintenance. The onsite service is incredibly convenient for our drivers. Highly recommend for suspension and brake work.",
-                stars: 5
-            }
-        ];
+    {
+        "name": "Antonio Solis",
+        "rating": 5,
+        "body": "Excellent Service-Highly Recommend! I had a great experience with Tim and his team. they were professional, honest and took the time to explain the issue with my truck 18 wheeler clearly. the repair was done quickly and at a fair price. Great customer service. Definitely coming back for any future work."
+    },
+    {
+        "name": "Stan Huhndorf",
+        "rating": 5,
+        "body": "These guys are good. They took on a challenge on my motorhome/bus suspension that most mechanics would not and did a spectacular job. Thank you so much."
+    },
+    {
+        "name": "Scott Welty",
+        "rating": 5,
+        "body": "I have used Tim and his crew for multiple repairs and service needs and can not say enough about this team. They go above and beyond to ensure the job is complete correctly instead of just chasing parts. They stay in constant communication with you, so you know what stage your repair is in. Their knowledge is incredible."
+    },
+    {
+        "name": "Amanda Dockery",
+        "rating": 5,
+        "body": "I’m writing this review for my husband. We are from NC. Husband is a truck driver. Truck broke down out in OK. We called so many shops and no one could help. Found Tim. Tim was a huge blessing to our family. Extremely professional! Even … More"
+    },
+    {
+        "name": "Larry Bluhm",
+        "rating": 5,
+        "body": "Tim is one of the most honest mechanics in the business. He tells you how it is, and he handles it. He rebuilt a Cummings for me and I am nothing but pleased with the outcome. Well worth the drive to Ardmore he is the only one that will ever work on my trucks again. Thanks for your honesty and hard work!!!"
+    },
+    {
+        "name": "Shawnquise Gatewood",
+        "rating": 5,
+        "body": "Very knowledgeable and knows exactly what he’s doing very kind he will get you in and out in a timely fashion manner whenever I needed him he’s always been there. I would recommend him to anyone."
+    },
+    {
+        "name": "Chris Gragg",
+        "rating": 5,
+        "body": "Very good mechanics, always trying to help save money that doesn’t need spent, always calls me to make sure everything is still working, I call all the time with questions about work I’m doing myself and they always take the time to guide me through my repair. I can’t say that anyone does that anymore. Great people"
+    },
+    {
+        "name": "James Mullins",
+        "rating": 5,
+        "body": "These guys are great, they stayed in contact with me step by step and explained what they were doing and were not pushy, very friendly, I highly recommend them for any truck repairs. Defiantly using them again! More"
+    },
+    {
+        "name": "Daniel Jones",
+        "rating": 5,
+        "body": "These guys are A+.. Very knowledgeable and will get the work down to a T. Always kept me updated on what’s going on with my truck. I’ll recommend Gallagher to anybody. More"
+    },
+    {
+        "name": "Curtis Herrod",
+        "rating": 5,
+        "body": "Tim Gallagher is the absolute truth I’ve been stuck on the side of the road for two days I’ve also had several people come look at my truck Tim pulls up and in 30 mins I’m rolling again I strongly suggest people deal with the shop 1st the absolute best hands down.....Thanks again Tim"
+    },
+    {
+        "name": "Ryan Calvery",
+        "rating": 5,
+        "body": "Best engine mechanics I’ve ever came across very professional and fair priced!!! These are my guys from here on out!! More"
+    },
+    {
+        "name": "Bryan",
+        "rating": 5,
+        "body": "Had a semi go down and they got us back going in just a few hours!! Excellent work and didn’t break the bank!"
+    },
+    {
+        "name": "Michelle Turner",
+        "rating": 5,
+        "body": "Definitely the place to go for your mechanical needs. Highly recommended 😊 …"
+    },
+    {
+        "name": "Heather Herell",
+        "rating": 5,
+        "body": "Tim is one of the best in Ardmore. Highly recommend! He is reliable and very knowledgeable! Positive… More"
+    },
+    {
+        "name": "Kyle Schoonover",
+        "rating": 5,
+        "body": "Fast, friendly and got me out of a bind. Hopefully I won't need to use him again but It's nice to know he is there should I need him. More"
+    },
+    {
+        "name": "Robin Berry",
+        "rating": 5,
+        "body": "These guys are great. Reasonable price. Know what they are doing."
+    },
+    {
+        "name": "Terry Lawson",
+        "rating": 5,
+        "body": "Way better than anyone in Ardmore and is affordable to. He is my mechanic from here on!"
+    },
+    {
+        "name": "Bryan Hutchens",
+        "rating": 5,
+        "body": "Great shop and good rates."
+    },
+    {
+        "name": "Eddy Reid",
+        "rating": 5,
+        "body": "Top notch people quality work"
+    },
+    {
+        "name": "Nathan Ingram",
+        "rating": 5,
+        "body": "Amazing group of guys"
+    },
+    {
+        "name": "Keith Spinar",
+        "rating": 5,
+        "body": "The best in the business!"
+    },
+    {
+        "name": "Suzette Erhart",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Joshua Oxford",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Toni Lee",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "leslie gallagher",
+        "rating": 5,
+        "body": ""
+    }
+];
 
         // --- 2. GALLERY DATA (Edit this array to change images) ---
         // I am using Unsplash placeholders. Replace 'src' with your actual image paths (e.g., 'images/truck1.jpg')
         const galleryData = [
-            {
-                src: "https://images.unsplash.com/photo-1599256872237-5dcc0fbe9668?q=80&w=1000&auto=format&fit=crop",
-                alt: "Heavy Duty Engine Repair"
-            },
-            {
-                src: "https://images.unsplash.com/photo-1581092921461-eab62e97a783?q=80&w=1000&auto=format&fit=crop",
-                alt: "Truck Under Carriage"
-            },
-            {
-                src: "https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=1000&auto=format&fit=crop",
-                alt: "Diesel Mechanic Tools"
-            },
-            {
-                src: "https://images.unsplash.com/photo-1632823471565-1ecf9856d788?q=80&w=1000&auto=format&fit=crop",
-                alt: "Wheel Seal Repair"
-            }
+            {src: "GDS1.webp", alt: "Heavy Duty Engine Repair"},
+            {src: "GDS2.webp", alt: "Heavy Duty Engine Repair"},
+                {src: "GDS3.webp", alt: "Heavy Duty Engine Repair"},
+                {src: "GDS4.webp", alt: "Heavy Duty Engine Repair"},
+                {src: "GDS5.webp", alt: "Heavy Duty Engine Repair"},
+                {src: "GDS6.webp", alt: "Heavy Duty Engine Repair"},
         ];
 
         // --- RENDER FUNCTIONS ---
@@ -560,14 +660,14 @@
         reviewsData.forEach(review => {
             // Create star string
             let starHtml = '';
-            for(let i=0; i<review.stars; i++) {
+            for(let i=0; i<review.rating; i++) {
                 starHtml += '<i class="fas fa-star"></i>';
             }
 
             const reviewHtml = `
                 <div class="review-card">
                     <div class="stars">${starHtml}</div>
-                    <p class="review-text">"${review.text}"</p>
+                    <p class="review-text">"${review.body}"</p>
                     <p class="review-author">- ${review.name}</p>
                 </div>
             `;
