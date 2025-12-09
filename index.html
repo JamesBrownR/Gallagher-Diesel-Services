@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallagher Diesel Services LLC | Ardmore, OK</title>
+    <meta name="description" content="Expert heavy and medium duty truck repair in Ardmore, OK. Onsite diagnostics, engine, drivetrain, suspension, and electrical services.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-red: #e00000; /* Matched closer to logo red */
+            --dark-bg: #111111;
+            --light-bg: #f4f4f4;
+            --text-color: #333333;
+            --white: #ffffff;
+            --accent-grey: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- UTILITIES --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center { text-align: center; }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-bg);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-red);
+            margin: 10px auto 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-red);
+            color: var(--white);
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #b30000;
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo img {
+            height: 60px; /* Adjust based on your actual logo file */
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .nav-btn {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            /* Using a dark gradient over a truck placeholder image */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- SERVICES SECTION --- */
+        .services {
+            background-color: var(--light-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary-red);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-bg);
+        }
+
+        /* --- GALLERY SECTION (JS POPULATED) --- */
+        .gallery {
+            background-color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* --- REVIEWS SECTION (JS POPULATED) --- */
+        .reviews {
+            background-color: var(--dark-bg);
+            color: var(--white);
+        }
+
+        .reviews .section-title {
+            color: var(--white);
+        }
+
+        .reviews-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .review-card {
+            background: var(--accent-grey);
+            padding: 30px;
+            border-radius: 8px;
+            flex: 1 1 300px;
+            max-width: 400px;
+        }
+
+        .stars {
+            color: #ffc107;
+            margin-bottom: 15px;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .review-author {
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+
+        /* --- LOCATION & INFO SECTION --- */
+        .location {
+            background-color: var(--white);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            margin-top: 40px;
+        }
+
+        .info-box {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .info-item i {
+            color: var(--primary-red);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        .hours-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .hours-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #000;
+            color: #888;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-socials {
+            margin-bottom: 20px;
+        }
+
+        .footer-socials a {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-socials a:hover {
+            color: var(--primary-red);
+        }
+
+        /* --- MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Hide nav on mobile for simplicity in this demo */
+            .location-grid { grid-template-columns: 1fr; }
+            
+            /* Simple mobile menu logic could be added here */
+            .mobile-menu-btn { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#"><img src="Logo.png" alt="Gallagher Diesel Services Logo"></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Our Work</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact" class="nav-btn">Contact Us</a></li>
+                </ul>
+                <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Heavy Duty Reliability</h1>
+            <p>Onsite diagnostics and repair for heavy and medium duty truck platforms. We come to you in Ardmore, OK and surrounding areas.</p>
+            <a href="tel:+15806302804" class="btn"><i class="fas fa-phone-alt"></i> Call (580) 630-2804</a>
+        </div>
+    </section>
+
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Our Services</h2>
+                <p>Comprehensive repair solutions for your fleet.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-truck-pickup service-icon"></i>
+                    <h3>Onsite Diagnostics</h3>
+                    <p>Advanced diagnostic tools to identify issues quickly at your location, minimizing downtime.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cogs service-icon"></i>
+                    <h3>Engine & Drivetrain</h3>
+                    <p>Full service repair for heavy duty engines, transmissions, and drivetrain components.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools service-icon"></i>
+                    <h3>Suspension & Brakes</h3>
+                    <p>Complete suspension work, brake replacements, and air system repairs.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-bolt service-icon"></i>
+                    <h3>Electrical Systems</h3>
+                    <p>Troubleshooting and repair for wiring, alternators, starters, and lighting systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Recent Work</h2>
+                <p>Quality workmanship on every job.</p>
+            </div>
+            <div class="gallery-grid" id="gallery-container"></div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Client Reviews</h2>
+            </div>
+            <div class="reviews-container" id="reviews-container"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="location section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Contact & Location</h2>
+            </div>
+
+            <div class="location-grid">
+                <div class="info-box">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>915 Deere Dr<br>Ardmore, OK 73401</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+15806302804">+1 580-630-2804</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:gallagherdiesel@gmail.com">gallagherdiesel@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+                    
+                    <h4><i class="far fa-clock"></i> Hours of Operation</h4>
+                    <table class="hours-table">
+                        <tr><td>Monday</td><td>8:00 AM - 5:00 PM</td></tr>
+                        <tr><td>Tuesday</td><td>8:00 AM - 5:00 PM</td></tr>
+                        <tr><td>Wednesday</td><td>8:00 AM - 5:00 PM</td></tr>
+                        <tr><td>Thursday</td><td>8:00 AM - 5:00 PM</td></tr>
+                        <tr><td>Friday</td><td>8:00 AM - 5:00 PM</td></tr>
+                        <tr><td>Saturday</td><td>8:00 AM - 12:00 PM</td></tr>
+                        <tr><td>Sunday</td><td>Closed</td></tr>
+                    </table>
+                </div>
+
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.483984852086!2d-97.1685!3d34.1925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b2866974246197%3A0x62888998899889!2s915%20Deere%20Dr%2C%20Ardmore%2C%20OK%2073401!5e0!3m2!1sen!2sus!4v1625680000000!5m2!1sen!2sus" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-socials">
+                <a href="https://facebook.com/GallagherDiesel" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://tiktok.com/@gallagherdiesel" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="mailto:gallagherdiesel@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Gallagher Diesel Services LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. REVIEWS DATA (Edit this array to add/change reviews) ---
+        const reviewsData = [
+            {
+                name: "Mike T.",
+                text: "Tim is a lifesaver. My truck broke down just outside Ardmore and he was there quickly. Diagnosed the electrical issue and had me back on the road in hours.",
+                stars: 5
+            },
+            {
+                name: "Sarah Jenkins",
+                text: "Professional, knowledgeable, and fair pricing. Hard to find good diesel mechanics these days who actually show up. Gallagher Diesel is top notch.",
+                stars: 5
+            },
+            {
+                name: "Red River Logistics",
+                text: "We use Gallagher for our fleet maintenance. The onsite service is incredibly convenient for our drivers. Highly recommend for suspension and brake work.",
+                stars: 5
+            }
+        ];
+
+        // --- 2. GALLERY DATA (Edit this array to change images) ---
+        // I am using Unsplash placeholders. Replace 'src' with your actual image paths (e.g., 'images/truck1.jpg')
+        const galleryData = [
+            {
+                src: "https://images.unsplash.com/photo-1599256872237-5dcc0fbe9668?q=80&w=1000&auto=format&fit=crop",
+                alt: "Heavy Duty Engine Repair"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1581092921461-eab62e97a783?q=80&w=1000&auto=format&fit=crop",
+                alt: "Truck Under Carriage"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=1000&auto=format&fit=crop",
+                alt: "Diesel Mechanic Tools"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1632823471565-1ecf9856d788?q=80&w=1000&auto=format&fit=crop",
+                alt: "Wheel Seal Repair"
+            }
+        ];
+
+        // --- RENDER FUNCTIONS ---
+
+        // Render Reviews
+        const reviewsContainer = document.getElementById('reviews-container');
+        
+        reviewsData.forEach(review => {
+            // Create star string
+            let starHtml = '';
+            for(let i=0; i<review.stars; i++) {
+                starHtml += '<i class="fas fa-star"></i>';
+            }
+
+            const reviewHtml = `
+                <div class="review-card">
+                    <div class="stars">${starHtml}</div>
+                    <p class="review-text">"${review.text}"</p>
+                    <p class="review-author">- ${review.name}</p>
+                </div>
+            `;
+            reviewsContainer.innerHTML += reviewHtml;
+        });
+
+        // Render Gallery
+        const galleryContainer = document.getElementById('gallery-container');
+
+        galleryData.forEach(img => {
+            const imgHtml = `
+                <div class="gallery-item">
+                    <img src="${img.src}" alt="${img.alt}">
+                </div>
+            `;
+            galleryContainer.innerHTML += imgHtml;
+        });
+
+    </script>
+
+</body>
+</html>
