@@ -270,6 +270,10 @@
             flex: 1 1 300px;
             max-width: 400px;
         }
+        .show-more-btn {
+    margin-top: 40px;
+    padding: 12px 40px;
+}
 
         .stars {
             color: #ffc107;
@@ -443,14 +447,17 @@
         </div>
     </section>
 
-    <section id="reviews" class="reviews section-padding">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-title">Client Reviews</h2>
-            </div>
-            <div class="reviews-container" id="reviews-container"></div>
+   <section id="reviews" class="reviews section-padding">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">Client Reviews</h2>
         </div>
-    </section>
+        <div class="reviews-container" id="reviews-container"></div>
+        <div class="text-center">
+            <button id="show-more-btn" class="btn show-more-btn" style="display: none;">Show More Reviews</button>
+        </div>
+    </div>
+</section>
 
     <section id="contact" class="location section-padding">
         <div class="container">
@@ -660,24 +667,62 @@
         // --- RENDER FUNCTIONS ---
 
         // Render Reviews
-        const reviewsContainer = document.getElementById('reviews-container');
-        
-        reviewsData.forEach(review => {
-            // Create star string
-            let starHtml = '';
-            for(let i=0; i<review.rating; i++) {
-                starHtml += '<i class="fas fa-star"></i>';
-            }
+       // --- RENDER FUNCTIONS ---
 
-            const reviewHtml = `
-                <div class="review-card">
-                    <div class="stars">${starHtml}</div>
-                    <p class="review-text">"${review.body}"</p>
-                    <p class="review-author">- ${review.name}</p>
-                </div>
-            `;
-            reviewsContainer.innerHTML += reviewHtml;
-        });
+// Render Reviews with Show More/Less functionality
+const reviewsContainer = document.getElementById('reviews-container');
+const showMoreBtn = document.getElementById('show-more-btn');
+const REVIEWS_PER_BATCH = 6;
+let currentReviewIndex = 0;
+
+function renderReviews(count) {
+    const endIndex = Math.min(currentReviewIndex + count, reviewsData.length);
+    
+    for(let i = currentReviewIndex; i < endIndex; i++) {
+        const review = reviewsData[i];
+        
+        // Create star string
+        let starHtml = '';
+        for(let j = 0; j < review.rating; j++) {
+            starHtml += '<i class="fas fa-star"></i>';
+        }
+
+        const reviewHtml = `
+            <div class="review-card">
+                <div class="stars">${starHtml}</div>
+                <p class="review-text">"${review.body}"</p>
+                <p class="review-author">- ${review.name}</p>
+            </div>
+        `;
+        reviewsContainer.innerHTML += reviewHtml;
+    }
+    
+    currentReviewIndex = endIndex;
+    
+    // Update button visibility and text
+    if (currentReviewIndex >= reviewsData.length) {
+        showMoreBtn.textContent = 'Show Less Reviews';
+    } else {
+        showMoreBtn.style.display = 'inline-block';
+    }
+}
+
+// Show More/Less button click handler
+showMoreBtn.addEventListener('click', function() {
+    if (currentReviewIndex >= reviewsData.length) {
+        // Reset to show only first 6
+        reviewsContainer.innerHTML = '';
+        currentReviewIndex = 0;
+        renderReviews(REVIEWS_PER_BATCH);
+        showMoreBtn.textContent = 'Show More Reviews';
+    } else {
+        // Show next batch
+        renderReviews(REVIEWS_PER_BATCH);
+    }
+});
+
+// Initial load - show first 6 reviews
+renderReviews(REVIEWS_PER_BATCH);
 
         // Render Gallery
         const galleryContainer = document.getElementById('gallery-container');
