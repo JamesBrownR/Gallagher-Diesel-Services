@@ -146,13 +146,16 @@
         }
 
         /* --- HERO SECTION --- */
+     /* --- HERO SECTION --- */
         .hero {
             /* Using a dark gradient over a truck placeholder image */
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('GDS.webp');
-            background-size: cover;
-            background-position: center;
-            height: 85vh;
+            background: 
+                radial-gradient(circle, rgba(0,0,0,0.4) 1px, transparent 1px),
+                linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                url('GDS.webp');
+            background-size: 4px 4px, cover, cover;
+            background-position: center, center, center;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -650,6 +653,8 @@
                 {src: "GDS4.webp", alt: "Heavy Duty Engine Repair"},
                 {src: "GDS5.webp", alt: "Heavy Duty Engine Repair"},
                 {src: "GDS6.webp", alt: "Heavy Duty Engine Repair"},
+              {src: "GDS7.webp", alt: "Heavy Duty Engine Repair"},
+              {src: "GDS8.webp", alt: "Heavy Duty Engine Repair"},
         ];
 
         // --- RENDER FUNCTIONS ---
