@@ -343,6 +343,61 @@
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
+        /* --- CONTACT FORM --- */
+.contact-form-wrapper {
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark-bg);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+}
+
+.contact-form .btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.map-section {
+    margin-top: 40px;
+}
+
+.map-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--dark-bg);
+}
 
         /* --- FOOTER --- */
         footer {
@@ -459,55 +514,86 @@
     </div>
 </section>
 
-    <section id="contact" class="location section-padding">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-title">Contact & Location</h2>
+   <section id="contact" class="location section-padding">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">Contact & Location</h2>
+        </div>
+
+        <div class="location-grid">
+            <div class="info-box">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>915 Deere Dr<br>Ardmore, OK 73401</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+15806302804">+1 580-630-2804</a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:gallagherdiesel@gmail.com">gallagherdiesel@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+                
+                <h4><i class="far fa-clock"></i> Hours of Operation</h4>
+                <table class="hours-table">
+                    <tr><td>Monday</td><td>8:00 AM - 5:00 PM</td></tr>
+                    <tr><td>Tuesday</td><td>8:00 AM - 5:00 PM</td></tr>
+                    <tr><td>Wednesday</td><td>8:00 AM - 5:00 PM</td></tr>
+                    <tr><td>Thursday</td><td>8:00 AM - 5:00 PM</td></tr>
+                    <tr><td>Friday</td><td>8:00 AM - 5:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>8:00 AM - 12:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>Closed</td></tr>
+                </table>
             </div>
 
-            <div class="location-grid">
-                <div class="info-box">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>915 Deere Dr<br>Ardmore, OK 73401</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p><a href="tel:+15806302804">+1 580-630-2804</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:gallagherdiesel@gmail.com">gallagherdiesel@gmail.com</a></p>
-                        </div>
+            <div class="contact-form-wrapper">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     
-                    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
                     
-                    <h4><i class="far fa-clock"></i> Hours of Operation</h4>
-                    <table class="hours-table">
-                        <tr><td>Monday</td><td>8:00 AM - 5:00 PM</td></tr>
-                        <tr><td>Tuesday</td><td>8:00 AM - 5:00 PM</td></tr>
-                        <tr><td>Wednesday</td><td>8:00 AM - 5:00 PM</td></tr>
-                        <tr><td>Thursday</td><td>8:00 AM - 5:00 PM</td></tr>
-                        <tr><td>Friday</td><td>8:00 AM - 5:00 PM</td></tr>
-                        <tr><td>Saturday</td><td>8:00 AM - 12:00 PM</td></tr>
-                        <tr><td>Sunday</td><td>Closed</td></tr>
-                    </table>
-                </div>
-
-                <div class="map-wrapper">
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3302.0796032586195!2d-97.1420342!3d34.1443055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864d2fc979632fe5%3A0x8ef627f4c5e203c2!2sGallagher%20Diesel%20Services%20LLC!5e0!3m2!1sen!2sus!4v1765245095134!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
             </div>
         </div>
-    </section>
+
+        <!-- Map Section Below -->
+        <div class="map-section">
+            <h3 class="text-center" style="margin: 60px 0 30px;">Find Us</h3>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3302.0796032586195!2d-97.1420342!3d34.1443055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864d2fc979632fe5%3A0x8ef627f4c5e203c2!2sGallagher%20Diesel%20Services%20LLC!5e0!3m2!1sen!2sus!4v1765245095134!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer>
         <div class="container">
