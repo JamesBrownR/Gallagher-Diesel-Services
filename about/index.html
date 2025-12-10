@@ -85,16 +85,27 @@
 <body>
 
     <header>
-        <div class="container nav-flex">
-            <a href="/" style="font-weight:800; font-size:1.5rem;">GDS<span style="color:var(--primary-red)">.</span></a>
-            <nav class="nav-links">
-                <ul class="nav-links">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#"><img src="Logo.png" alt="Gallagher Diesel Services Logo"></a>
+            </div>
+            <nav>
+               <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="about/index.html">About Us</a></li> <li><a href="merch/index.html">Shop Gear</a></li> <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact" class="nav-btn">Contact Us</a></li>
 </ul>
-            </nav>
+<div class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></div>            </nav>
         </div>
+        <!-- Mobile Navigation Menu -->
+<div class="mobile-nav" id="mobile-nav">
+    <ul>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Our Work</a></li>
+        <li><a href="#reviews" class="mobile-nav-link">Reviews</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact Us</a></li>
+    </ul>
+</div>
     </header>
 
     <section class="about-hero">
