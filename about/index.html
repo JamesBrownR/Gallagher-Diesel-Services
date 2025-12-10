@@ -1,1 +1,165 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Gallagher Diesel Services</title>
+    <meta name="description" content="Our story: From Upstate NY to Ardmore, OK. 6 years of honest, expert diesel repair.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- COPYING CORE STYLES FROM HOME PAGE FOR CONSISTENCY --- */
+        :root {
+            --primary-red: #e00000;
+            --dark-bg: #111111;
+            --light-bg: #f4f4f4;
+            --text-color: #333333;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; color: var(--text-color); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; font-weight: 800; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* HEADER (Simplified for About Page) */
+        header { background: var(--white); padding: 15px 0; border-bottom: 2px solid var(--primary-red); }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .nav-links a { margin-left: 20px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; }
+        .nav-links a:hover { color: var(--primary-red); }
+
+        /* --- ABOUT PAGE SPECIFIC STYLES --- */
+        
+        /* Hero Section */
+        .about-hero {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        .about-hero h1 { font-size: 3rem; margin-bottom: 10px; color: var(--primary-red); }
+        .about-hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; opacity: 0.8; }
+
+        /* Split Section (Tim's Bio) */
+        .bio-section { padding: 80px 0; }
+        .bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        
+        .bio-image { position: relative; }
+        .bio-image img { 
+            width: 100%; 
+            border-radius: 8px; 
+            box-shadow: 20px 20px 0px var(--primary-red); /* The "Cool" design element */
+            filter: grayscale(10%) contrast(110%);
+        }
+        
+        .bio-content h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--dark-bg); }
+        .bio-content h4 { color: var(--primary-red); margin-bottom: 20px; letter-spacing: 2px; }
+        .bio-content p { margin-bottom: 15px; font-size: 1.05rem; }
+
+        /* Stats / History Bar */
+        .stats-bar { background: var(--primary-red); color: white; padding: 40px 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; gap: 20px; }
+        .stat-item h3 { font-size: 3rem; margin-bottom: 5px; }
+        .stat-item p { font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Values Section */
+        .values-section { padding: 80px 0; background: var(--light-bg); }
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .value-card { background: white; padding: 30px; border-radius: 8px; border-left: 5px solid var(--primary-red); }
+        .value-card h3 { margin-bottom: 10px; }
+
+        /* Footer */
+        footer { background: #000; color: #888; text-align: center; padding: 20px; margin-top: 0; }
+
+        @media(max-width: 768px) {
+            .bio-grid { grid-template-columns: 1fr; }
+            .bio-image { margin-bottom: 40px; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <a href="../DASD.html" style="font-weight:800; font-size:1.5rem;">GDS<span style="color:var(--primary-red)">.</span></a>
+            <nav class="nav-links">
+                <a href="../DASD.html">Home</a>
+                <a href="../merchandise/index.html">Shop Gear</a> <a href="../DASD.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>Built on Honesty.</h1>
+            <p>From Upstate New York to the heart of Oklahoma, we keep American trucks moving.</p>
+        </div>
+    </section>
+
+    <section class="bio-section">
+        <div class="container bio-grid">
+            <div class="bio-image">
+                <img src="GDSTim.jpeg" alt="Tim Gallagher Owner">
+            </div>
+            <div class="bio-content">
+                <h4>THE OWNER</h4>
+                <h2>Meet Tim Gallagher</h2>
+                <p><strong>"I don't just chase parts. I solve the problem."</strong></p>
+                <p>Six years ago, we started Gallagher Diesel Services with a toolbox and a commitment to doing things the right way. Originally hailing from Upstate New York, we brought that northern work ethic down to Ardmore, Oklahoma, and we haven't looked back since.</p>
+                <p>We recently expanded into a <strong>brand new facility</strong> to better serve our growing family of clients. Whether you are an owner-operator or managing a large fleet, you get the same level of respect and transparency.</p>
+                <p>Our customers know us for one thing above all else: <strong>Communication.</strong> You will never be left guessing about the status of your repair or the cost of the bill.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h3>6+</h3>
+                <p>Years in Business</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Honesty Guarantee</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Dedication to Quality</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 10px;">Why Drivers Choose Us</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto;">Based on feedback from over 50+ 5-Star Reviews.</p>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3><i class="fas fa-comments" style="color:var(--primary-red)"></i> Constant Communication</h3>
+                    <p>We stay in touch throughout the whole process. As one client said, "They explain the issue clearly instead of just throwing parts at it."</p>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-search" style="color:var(--primary-red)"></i> Diagnostic Wizards</h3>
+                    <p>We take on the challenges other shops turn away. From complex electrical gremlins to custom engine builds, we find the root cause.</p>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-home" style="color:var(--primary-red)"></i> Family Owned</h3>
+                    <p>We are a family business. When you trust us with your truck, we treat you like family, not just a number on an invoice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gallagher Diesel Services LLC | Ardmore, OK</p>
+    </footer>
+
+</body>
+</html>
