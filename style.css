@@ -1,15 +1,15 @@
   <style>
-        /* --- CSS VhhARIABLES & RESET --- */
-        root {
-            --primary-red: #e00000; /* Matched closer to logo red */
+           
+
+ :root {
+            --primary-red: #e00000;
             --dark-bg: #111111;
             --light-bg: #f4f4f4;
             --text-color: #333333;
             --white: #ffffff;
-            --accent-grey: #2c2c2c;
-        }
+               --accent-grey: #2c2c2c;
 
-
+ }
         * {
             margin: 0;
             padding: 0;
